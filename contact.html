@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Help Animals By Shamor Johnson</title>
+
+    <style>
+        /* FULL PAGE GIF BACKGROUND */
+        body {
+            background: url("https://i.pinimg.com/originals/fc/d5/b1/fcd5b15d42a95b5b56f2cc2eff85e02d.gif") 
+                        no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Make form readable on top of GIF */
+        .contact-form {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 40px auto;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #aaa;
+        }
+
+        button {
+            padding: 12px 20px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #555;
+        }
+
+        /* Optional: make header/footer readable */
+        .site-header, .site-footer {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 15px 0;
+        }
+
+        .main-nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">Help Animals By Shamor Johnson</div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <!-- PAGE TITLE -->
+    <section class="page-title">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Have questions or want to get involved? Send us a message.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM SECTION -->
+    <section class="contact-section">
+        <div class="container">
+
+            <form class="contact-form" action="#" method="post">
+
+                <!-- NAME -->
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" placeholder="Your Name" required>
+                </div>
+
+                <!-- EMAIL -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="Your email" required>
+                </div>
+
+                <!-- SUBJECT -->
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input id="subject" name="subject" type="text" placeholder="What's the subject?" required>
+                </div>
+
+                <!-- MESSAGE -->
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="What's your message?" required></textarea>
+                </div>
+
+                <!-- SUBMIT BUTTON -->
+                <button type="submit">Send Message</button>
+
+            </form>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2024 Help Animals By Shamor Johnson. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
+
