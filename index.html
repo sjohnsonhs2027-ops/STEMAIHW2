@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Animals By Shamor Johnson</title>
+
+<style>
+
+/* --------------------------------------------------
+   BASE STYLES
+-------------------------------------------------- */
+
+:root {
+    --soft-green: #7ecb7e;
+    --forest-green: #0f3d1e;
+    --earth-brown: #5a3e2b;
+    --light-beige: #f5f0e6;
+    --fresh-green: #3ddc84;
+    --white: #ffffff;
+    --black: #000000;
+
+    --glow: 0 0 12px rgba(0, 255, 100, 0.35);
+}
+
+/* Default Theme = Soft Nature */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--light-beige);
+    color: var(--black);
+    transition: 0.4s ease;
+}
+
+/* Containers */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Sections */
+.section {
+    padding: 60px 0;
+    border-radius: 12px;
+    box-shadow: var(--glow);
+    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+/* --------------------------------------------------
+   HEADER
+-------------------------------------------------- */
+
+.site-header {
+    background: var(--soft-green);
+    padding: 20px 0;
+    box-shadow: var(--glow);
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--black);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.main-nav a:hover {
+    background: var(--fresh-green);
+    box-shadow: var(--glow);
+}
+
+/* --------------------------------------------------
+   HERO SLIDER
+-------------------------------------------------- */
+
+.slides {
+    display: grid;
+    gap: 40px;
+}
+
+.slide {
+    padding: 20px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: var(--glow);
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: var(--glow);
+}
+
+.gif-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.gif-row img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: var(--glow);
+}
+
+/* --------------------------------------------------
+   ABOUT PREVIEW
+-------------------------------------------------- */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: var(--glow);
+}
+
+/* --------------------------------------------------
+   SERVICES
+-------------------------------------------------- */
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--glow);
+}
+
+.feature-card img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: var(--glow);
+}
+
+.feature-card ul {
+    padding-left: 20px;
+}
+
+/* --------------------------------------------------
+   GALLERY
+-------------------------------------------------- */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: var(--glow);
+    transition: 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+}
+
+/* --------------------------------------------------
+   CTA
+-------------------------------------------------- */
+
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: var(--fresh-green);
+    color: var(--black);
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: var(--glow);
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: var(--soft-green);
+    transform: scale(1.05);
+}
+
+/* --------------------------------------------------
+   CONTACT FORM
+-------------------------------------------------- */
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 2px solid var(--soft-green);
+    box-shadow: var(--glow);
+}
+
+.contact-form button {
+    padding: 12px 20px;
+    background: var(--fresh-green);
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: var(--glow);
+}
+
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
+
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--soft-green);
+    box-shadow: var(--glow);
+}
+
+/* --------------------------------------------------
+   THEME TOGGLE SWITCH
+-------------------------------------------------- */
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+.theme-toggle input {
+    display: none;
+}
+
+.toggle-label {
+    width: 60px;
+    height: 30px;
+    background: var(--fresh-green);
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: var(--glow);
+}
+
+.toggle-ball {
+    width: 26px;
+    height: 26px;
+    background: var(--white);
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: 0.4s;
+    box-shadow: var(--glow);
+}
+
+/* --------------------------------------------------
+   THEME CYCLE (3 THEMES)
+-------------------------------------------------- */
+
+#themeSwitch:checked ~ #page {
+    background: var(--forest-green);
+    color: var(--white);
+}
+
+#themeSwitch:checked ~ #page .section,
+#themeSwitch:checked ~ #page .feature-card,
+#themeSwitch:checked ~ #page .slide {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#themeSwitch:checked + .toggle-label .toggle-ball {
+    transform: translateX(30px);
+}
+
+#themeSwitch:checked:active ~ #page {
+    background: var(--fresh-green);
+    color: var(--black);
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- THEME TOGGLE -->
+<div class="theme-toggle">
+    <input type="checkbox" id="themeSwitch">
+    <label for="themeSwitch" class="toggle-label">
+        <span class="toggle-ball"></span>
+    </label>
+</div>
+
+<!-- PAGE WRAPPER -->
+<div id="page">
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">Help Animals By Shamor Johnson</div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<!-- HERO SLIDER -->
+<section class="hero-slider section">
+    <div class="container">
+        <h2>Hero Slider</h2>
+
+        <div class="slides">
+
+            <!-- SLIDE 1: DEER -->
+            <div class="slide">
+                <h3>Deer</h3>
+                <img src="https://i.pinimg.com/736x/47/f0/c6/47f0c6c60869cf70224c67a2f990d5e9.jpg">
+
+                <h4>Deer</h4>
+                <ul>
+                    <li><strong>Personality:</strong> Shy, curious, and watchful.</li>
+                    <li><strong>Unique traits:</strong> Males grow and shed antlers yearly.</li>
+                    <li><strong>Where they live:</strong> Forests, woodlands, grasslands.</li>
+                    <li><strong>Species examples:</strong> White-tailed deer, Mule deer.</li>
+                </ul>
+
+                <div class="gif-row">
+                    <img src="https://i.pinimg.com/originals/8f/b4/ce/8fb4ce966c87a101d84a93090e72cb84.gif">
+                    <img src="https://i.pinimg.com/originals/2e/70/73/2e70738f4eed028bfe0eccab11d2da9f.gif">
+                    <img src="https://i.pinimg.com/originals/00/d9/c4/00d9c4f12a0a62ec3fe449e24402a178.gif">
+                    <img src="https://i.pinimg.com/originals/3e/4c/f7/3e4cf7abb87b3bcba03e2ea1b6ec2777.gif">
+                    <img src="https://i.pinimg.com/originals/12/28/39/122839733060c99d79b4cb32dcc1b314.gif">
+                </div>
+            </div>
+
+
+            <!-- SLIDE 2: TURTLES -->
+            <div class="slide">
+                <h3>Turtles</h3>
+                <img src="https://i.pinimg.com/736x/9c/63/62/9c6362df8a44dfbf2b3fd29b96c62ecd.jpg">
+
+                <h4>Turtles</h4>
+                <ul>
+                    <li><strong>Personality:</strong> Calm, slow-moving, solitary.</li>
+                    <li><strong>Unique traits:</strong> Hard shell, long lives.</li>
+                    <li><strong>Where they live:</strong> Oceans, rivers, lakes.</li>
+                    <li><strong>Species examples:</strong> Green sea turtle, Leatherback.</li>
+                </ul>
+
+                <div class="gif-row">
+                    <img src="https://i.pinimg.com/originals/32/c4/b5/32c4b574713bc11055056c64c6613ab1.gif">
+                    <img src="https://i.pinimg.com/originals/43/19/9f/43199f08e49bfe5eb400992832ff02e4.gif">
+                    <img src="https://i.pinimg.com/originals/06/a3/7f/06a37f52b1674f383bad26e4a1141a50.gif">
+                    <img src="https://i.pinimg.com/originals/bf/cf/7c/bfcf7c4a0c2f1114f231708b08e08ed7.gif">
+                    <img src="https://i.pinimg.com/originals/ce/be/29/cebe2905c03bba8935212626900d4000.gif">
+                </div>
+            </div>
+
+
+            <!-- SLIDE 3: BIRDS -->
+            <div class="slide">
+                <h3>Birds</h3>
+                <img src="https://i.pinimg.com/736x/41/74/20/417420428b4f2611673c08c5fb465a8e.jpg">
+
+                <h4>Birds</h4>
+                <ul>
+                    <li><strong>Personality:</strong> Bold, shy, curious, friendly.</li>
+                    <li><strong>Unique traits:</strong> Feathers, wings, songs.</li>
+                    <li><strong>Where they live:</strong> Everywhere.</li>
+                    <li><strong>Species examples:</strong> Robin, Eagle, Hummingbird.</li>
+                </ul>
+
+                <div class="gif-row">
+                    <img src="https://i.pinimg.com/originals/d8/2d/2f/d82d2f7a6381035d53d2341bd39c54d1.gif">
+                    <img src="https://i.pinimg.com/originals/50/4f/5d/504f5d72f5b147d581a18598655aa79e.gif">
+                    <img src="https://i.pinimg.com/originals/d1/ae/c4/d1aec4fa546bd78191efcd28713a24a2.gif">
+                    <img src="https://i.pinimg.com/originals/67/25/43/672543ebd102444f3ad659eb76d70c25.gif">
+                    <img src="https://i.pinimg.com/originals/4f/6f/e8/4f6fe896e8a2c8a6fcf9d1536db70822.gif">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ABOUT PREVIEW -->
+<section class="about-preview section">
+    <div class="container about-grid">
+        <div class="about-image">
+            <img src="https://i.pinimg.com/736x/df/7f/d8/df7fd8c873b98ff6328e903c480dd110.jpg">
+        </div>
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>Short preview text about who you are and what you do.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- SERVICES SECTION -->
+<section class="features section">
+    <div class="container">
+        <h2>My Services</h2>
+
+        <div class="features-grid">
+
+            <!-- SERVICE 1 -->
+            <div class="feature-card">
+                <img src="https://i.pinimg.com/736x/bb/28/26/bb28263d1f9d673d425b9c59d7b10c5a.jpg">
+                <h3>Help Deers</h3>
+                <p>Many deer species are doing okay, but some are endangered or critically endangered...</p>
+                <ul class="service-links">
+                    <li><a href="https://worlddeer.org/deer-behavior/" target="_blank">Deer Behavior</a></li>
+                    <li><a href="https://poweruptips.com/behavioral-adaptations-for-deers/" target="_blank">Deer Adaptations</a></li>
+                    <li><a href="https://vetadvises.com/what-attracts-deer-the-most/" target="_blank">What Attracts Deer</a></li>
+                    <li><a href="https://deerassociation.com/5-ways-hunters-drive-wildlife-diversity-just-by-working-for-deer/" target="_blank">Wildlife Diversity</a></li>
+                    <li><a href="https://knowanimals.com/what-do-deer-teach-us/" target="_blank">What Deer Teach Us</a></li>
+                </ul>
+            </div>
+
+            <!-- SERVICE 2 -->
+            <div class="feature-card">
+                <img src="https://i.pinimg.com/1200x/f7/fd/15/f7fd15c8c8771313a36cf432e9e56aad.jpg">
+                <h3>Help the Turtles</h3>
+                <p>Turtles and tortoises are among the most threatened groups — over half are at risk...</p>
+                <ul class="service-links">
+                    <li><a href="https://turtlerescues.com/" target="_blank">Turtle Rescues</a></li>
+                    <li><a href="https://www.fisheries.noaa.gov/feature-story/what-can-you-do-save-sea-turtles" target="_blank">Save Sea Turtles</a></li>
+                    <li><a href="https://www.seeturtles.org/" target="_blank">SEE Turtles</a></li>
+                    <li><a href="https://www.nytts.org/" target="_blank">NY Turtle Society</a></li>
+                    <li><a href="https://saveturtles.org/" target="_blank">Save Turtles</a></li>
+                </ul>
+            </div>
+
+            <!-- SERVICE 3 -->
+            <div class="feature-card">
+                <img src="https://i.pinimg.com/1200x/25/f6/db/25f6dbce22563b133ece740a45a65c10.jpg">
+                <h3>Help the Birds</h3>
+                <p>Bird populations are declining fast — over 61% of species are decreasing...</p>
+                <ul class="service-links">
+                    <li><a href="https://birdwatchinghq.com/how-to-help-birds/" target="_blank">How to Help Birds</a></li>
+                    <li><a href="https://www.birds.cornell.edu/home/get-involved/10-ways-to-help-birds/" target="_blank">10 Ways to Help Birds</a></li>
+                    <li><a href="https://www.3billionbirds.org/" target="_blank">3 Billion Birds Lost</a></li>
+                    <li><a href="https://abcbirds.org/get-involved/bird-friendly-living/" target="_blank">Bird-Friendly Living</a></li>
+                    <li><a href="https://www.nps.gov/subjects/birds/conservation-at-home.htm
