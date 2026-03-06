@@ -1,129 +1,380 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | Help Animals By Shamor Johnson</title>
-</head>
+/* --------------------------------------------------
+   GLOBAL IMPORTS
+-------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap');
 
-<body>
+/* --------------------------------------------------
+   RESET
+-------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<!-- HEADER -->
-<header class="site-header">
-    <div class="container header-inner">
-        <div class="logo">Help Animals By Shamor Johnson</div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+img {
+    max-width: 100%;
+    display: block;
+}
 
-<main>
+/* --------------------------------------------------
+   THEME COLORS
+-------------------------------------------------- */
+:root {
+    --soft-green: #7ecb7e;
+    --forest-green: #0f3d1e;
+    --fresh-green: #3ddc84;
+    --light-beige: #f5f0e6;
+    --white: #ffffff;
+    --black: #000000;
 
-    <!-- PAGE TITLE -->
-    <section class="page-title">
-        <div class="container">
-            <h1>Gallery</h1>
-            <p>A collection of beautiful animals we aim to protect.</p>
-        </div>
-    </section>
+    --glow: 0 0 15px rgba(0, 255, 100, 0.35);
+}
 
-    <!-- GALLERY GRID -->
-    <section class="gallery-section">
-        <div class="container">
-            <div class="gallery-grid">
+/* --------------------------------------------------
+   BODY TYPOGRAPHY
+-------------------------------------------------- */
+body {
+    font-family: "Lora", serif;
+    line-height: 1.7;
+    background: var(--light-beige);
+    color: var(--black);
+    transition: background 0.4s ease, color 0.4s ease;
+}
 
-                <!-- ORIGINAL 9 IMAGES -->
-                <figure class="gallery-item">
-                    <img src="https://i.pinimg.com/736x/df/7f/d8/df7fd8c873b98ff6328e903c480dd110.jpg" alt="Animal Image 1">
-                </figure>
+/* --------------------------------------------------
+   CONTAINER
+-------------------------------------------------- */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
 
-                <figure class="gallery-item">
-                    <img src="https://i.pinimg.com/736x/3e/b7/11/3eb711c76333952bc29f7916c628898e.jpg" alt="Animal Image 2">
-                </figure>
+/* --------------------------------------------------
+   SECTIONS
+-------------------------------------------------- */
+section {
+    padding: 60px 0;
+}
 
-                <figure class="gallery-item">
-                    <img src="https://i.pinimg.com/736x/77/9b/fc/779bfc0d13b0e94df982310d7e04b79d.jpg" alt="Animal Image 3">
-                </figure>
+/* --------------------------------------------------
+   BUTTONS
+-------------------------------------------------- */
+button,
+.button {
+    padding: 12px 20px;
+    border: none;
+    background: var(--fresh-green);
+    color: var(--black);
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s ease;
+    box-shadow: var(--glow);
+}
 
-                <figure class="gallery-item">
-                    <img src="https://i.pinimg.com/736x/1f/fe/b9/1ffeb9006a74732a1430cd63c6d2d834.jpg" alt="Animal Image 4">
-                </figure>
+button:hover,
+.button:hover {
+    background: var(--soft-green);
+    transform: scale(1.05);
+}
 
-                <figure class="gallery-item">
-                    <img src="https://i.pinimg.com/736x/48/bb/39/48bb3911b2e4f9575a613670ed6a9c1b.jpg" alt="Animal Image 5">
-                </figure>
+/* --------------------------------------------------
+   HEADER
+-------------------------------------------------- */
+.site-header {
+    padding: 20px 0;
+    background: var(--soft-green);
+    box-shadow: var(--glow);
+}
 
-                <figure class="gallery-item">
-                    <img src="https://i.pinimg.com/736x/df/f4/98/dff49800500c3edf0435c322cb818b6f.jpg" alt="Animal Image 6">
-                </figure>
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-                <figure class="gallery-item">
-                    <img src="https://i.pinimg.com/736x/bb/28/26/bb28263d1f9d673d425b9c59d7b10c5a.jpg" alt="Animal Image 7">
-                </figure>
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
 
-                <figure class="gallery-item">
-                    <img src="https://i.pinimg.com/736x/9c/63/62/9c6362df8a44dfbf2b3fd29b96c62ecd.jpg" alt="Animal Image 8">
-                </figure>
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
 
-                <figure class="gallery-item">
-                    <img src="https://i.pinimg.com/736x/41/74/20/417420428b4f2611673c08c5fb465a8e.jpg" alt="Animal Image 9">
-                </figure>
+.main-nav a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-                <!-- NEW 9 IMAGES -->
-                <figure class="gallery-item">
-                    <img src="https://i.pinimg.com/736x/ee/c9/34/eec9345823948280530057b06d3e36b3.jpg" alt="Animal Image 10">
-                </figure>
+.main-nav a:hover {
+    color: var(--forest-green);
+}
 
-                <figure class="gallery-item">
-                    <img src="https://i.pinimg.com/736x/5c/f1/9b/5cf19b6340c9580e8c225c6442b0fb25.jpg" alt="Animal Image 11">
-                </figure>
+/* MOBILE HEADER */
+@media (max-width: 700px) {
+    .header-inner {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
 
-                <figure class="gallery-item">
-                    <img src="https://i.pinimg.com/736x/f5/4d/a2/f54da2f009c9eb37acd539c5ab06cdd4.jpg" alt="Animal Image 12">
-                </figure>
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
 
-                <figure class="gallery-item">
-                    <img src="https://i.pinimg.com/1200x/2f/21/b6/2f21b69c1bd805498ebd09c844926a6e.jpg" alt="Animal Image 13">
-                </figure>
+/* --------------------------------------------------
+   THEME TOGGLE
+-------------------------------------------------- */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+}
 
-                <figure class="gallery-item">
-                    <img src="https://i.pinimg.com/736x/8d/b0/5b/8db05b5f73c0d34a20f8c684edc19304.jpg" alt="Animal Image 14">
-                </figure>
+.theme-toggle input {
+    display: none;
+}
 
-                <figure class="gallery-item">
-                    <img src="https://i.pinimg.com/1200x/d4/8c/7e/d48c7e397d19306a2b1b456b4412573a.jpg" alt="Animal Image 15">
-                </figure>
+.toggle-label {
+    width: 60px;
+    height: 30px;
+    background: var(--fresh-green);
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: var(--glow);
+}
 
-                <figure class="gallery-item">
-                    <img src="https://i.pinimg.com/736x/2c/ae/73/2cae7318d684b43ea4874a8ff124b21b.jpg" alt="Animal Image 16">
-                </figure>
+.toggle-ball {
+    width: 26px;
+    height: 26px;
+    background: var(--white);
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: 0.4s;
+    box-shadow: var(--glow);
+}
 
-                <figure class="gallery-item">
-                    <img src="https://i.pinimg.com/1200x/41/4e/05/414e058dfda06ceac2324b7bbe22a755.jpg" alt="Animal Image 17">
-                </figure>
+/* Move ball */
+#themeSwitch:checked + .toggle-label .toggle-ball {
+    transform: translateX(30px);
+}
 
-                <figure class="gallery-item">
-                    <img src="https://i.pinimg.com/1200x/28/7e/36/287e36c600add40ddccfb2043219c924.jpg" alt="Animal Image 18">
-                </figure>
+/* Theme 2: Deep Forest */
+#themeSwitch:checked ~ #page {
+    background: var(--forest-green);
+    color: var(--white);
+}
 
-            </div>
-        </div>
-    </section>
+#themeSwitch:checked ~ #page .section,
+#themeSwitch:checked ~ #page .feature-card,
+#themeSwitch:checked ~ #page .slide {
+    background: rgba(255, 255, 255, 0.1);
+}
 
-</main>
+/* Theme 3: Fresh Green (press toggle) */
+#themeSwitch:checked:active ~ #page {
+    background: var(--fresh-green);
+    color: var(--black);
+}
 
-<!-- FOOTER -->
-<footer class="site-footer">
-    <div class="container">
-        <p>© 2024 Help Animals By Shamor Johnson. All rights reserved.</p>
-    </div>
-</footer>
+/* --------------------------------------------------
+   HERO SLIDER
+-------------------------------------------------- */
+.slides {
+    display: grid;
+    gap: 40px;
+}
 
-</body>
-</html>
+.slide {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--glow);
+    animation: fadeIn 0.6s ease;
+}
+
+.slide img {
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+/* GIF row */
+.gif-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.gif-row img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: var(--glow);
+}
+
+/* --------------------------------------------------
+   ABOUT TWO-COLUMN
+-------------------------------------------------- */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.about-grid img {
+    border-radius: 12px;
+    box-shadow: var(--glow);
+}
+
+@media (max-width: 800px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --------------------------------------------------
+   SERVICES CARDS
+-------------------------------------------------- */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--glow);
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card img {
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+/* --------------------------------------------------
+   GALLERY PREVIEW GRID
+-------------------------------------------------- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: var(--glow);
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* --------------------------------------------------
+   CALL TO ACTION
+-------------------------------------------------- */
+.cta {
+    text-align: center;
+    padding: 50px 20px;
+    background: var(--fresh-green);
+    border-radius: 12px;
+    box-shadow: var(--glow);
+}
+
+/* --------------------------------------------------
+   ABOUT PAGE ALTERNATING LAYOUT
+-------------------------------------------------- */
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.two-column img {
+    border-radius: 12px;
+    box-shadow: var(--glow);
+}
+
+@media (max-width: 800px) {
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --------------------------------------------------
+   GALLERY PAGE FULL GRID
+-------------------------------------------------- */
+.gallery-section .gallery-grid {
+    gap: 25px;
+}
+
+.gallery-item img {
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.07);
+}
+
+/* --------------------------------------------------
+   CONTACT FORM
+-------------------------------------------------- */
+.contact-form {
+    display: grid;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--soft-green);
+    border-radius: 8px;
+    font-family: "Lora", serif;
+}
+
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--soft-green);
+    box-shadow: var(--glow);
+}
+
+/* --------------------------------------------------
+   ANIMATIONS
+-------------------------------------------------- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
